@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Users</h1>
+                {% for user in users %}
+                    <p>{{ user.id }} - {{ user.email }} - {{ user.first_name }} - {{ user.last_name }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
