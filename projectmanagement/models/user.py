@@ -1,7 +1,7 @@
 from django.db import models
 from .base import BaseModel
+from django.contrib.auth.models import AbstractUser
 
 
-class User(BaseModel):
-    username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=60)
+class User(AbstractUser, BaseModel):
+    pass

@@ -1,0 +1,502 @@
+[
+  {
+    "question": {
+      "title": "What is Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A programming language",
+          "correct": true
+        },
+        {
+          "title": "A type of snake",
+          "correct": false
+        },
+        {
+          "title": "A car brand",
+          "correct": false
+        },
+        {
+          "title": "A kind of fruit",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What are Python decorators?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Functions that modify the behavior of other functions",
+          "correct": true
+        },
+        {
+          "title": "A type of loop",
+          "correct": false
+        },
+        {
+          "title": "A way to define variables",
+          "correct": false
+        },
+        {
+          "title": "A special type of comment",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a list comprehension?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A concise way to create lists",
+          "correct": true
+        },
+        {
+          "title": "A method to sort lists",
+          "correct": false
+        },
+        {
+          "title": "A function to filter lists",
+          "correct": false
+        },
+        {
+          "title": "A way to concatenate lists",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "Explain the Global Interpreter Lock (GIL)",
+      "difficultLevel": "hard",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once",
+          "correct": true
+        },
+        {
+          "title": "A function to lock global variables",
+          "correct": false
+        },
+        {
+          "title": "A security feature in Python",
+          "correct": false
+        },
+        {
+          "title": "A feature that enhances multi-threading",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What are Python's built-in data types?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "list, tuple, dict, set",
+          "correct": true
+        },
+        {
+          "title": "array, stack, queue",
+          "correct": false
+        },
+        {
+          "title": "file, socket, thread",
+          "correct": false
+        },
+        {
+          "title": "int, str, float, bool",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between a shallow copy and a deep copy?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A shallow copy copies the reference of an object, while a deep copy copies the object itself",
+          "correct": true
+        },
+        {
+          "title": "A shallow copy copies all nested objects, while a deep copy only copies the top-level objects",
+          "correct": false
+        },
+        {
+          "title": "A shallow copy is slower than a deep copy",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between a shallow copy and a deep copy",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is PEP 8?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Python's style guide for writing clean code",
+          "correct": true
+        },
+        {
+          "title": "A performance enhancement proposal",
+          "correct": false
+        },
+        {
+          "title": "A debugging tool",
+          "correct": false
+        },
+        {
+          "title": "A Python library for data analysis",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between '==' and 'is' in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'==' checks for value equality, while 'is' checks for reference equality",
+          "correct": true
+        },
+        {
+          "title": "'==' is used for strings, while 'is' is used for integers",
+          "correct": false
+        },
+        {
+          "title": "'==' is faster than 'is'",
+          "correct": false
+        },
+        {
+          "title": "'is' checks for value equality, while '==' checks for reference equality",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a lambda function?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "An anonymous function expressed as a single statement",
+          "correct": true
+        },
+        {
+          "title": "A function that returns another function",
+          "correct": false
+        },
+        {
+          "title": "A built-in function for sorting",
+          "correct": false
+        },
+        {
+          "title": "A method to define classes",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python generator?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A function that returns an iterator and generates values one at a time",
+          "correct": true
+        },
+        {
+          "title": "A function that generates random numbers",
+          "correct": false
+        },
+        {
+          "title": "A function that automatically sorts data",
+          "correct": false
+        },
+        {
+          "title": "A function that compiles Python code",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "Explain the difference between Python 2 and Python 3",
+      "difficultLevel": "hard",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Python 3 introduced many changes, such as print function, integer division, Unicode support, etc.",
+          "correct": true
+        },
+        {
+          "title": "Python 2 is faster than Python 3",
+          "correct": false
+        },
+        {
+          "title": "Python 3 is fully backward compatible with Python 2",
+          "correct": false
+        },
+        {
+          "title": "Python 3 removed many redundant libraries",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a context manager in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A mechanism for resource management, implemented using 'with' statements",
+          "correct": true
+        },
+        {
+          "title": "A tool for managing threads",
+          "correct": false
+        },
+        {
+          "title": "A method to manage memory allocation",
+          "correct": false
+        },
+        {
+          "title": "A library for handling exceptions",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python package?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A directory containing an __init__.py file",
+          "correct": true
+        },
+        {
+          "title": "A single file containing Python code",
+          "correct": false
+        },
+        {
+          "title": "A collection of modules and sub-packages",
+          "correct": true
+        },
+        {
+          "title": "A zip file with Python scripts",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "How do you handle exceptions in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Using try, except, and finally blocks",
+          "correct": true
+        },
+        {
+          "title": "Using if-else statements",
+          "correct": false
+        },
+        {
+          "title": "Using error handling functions",
+          "correct": false
+        },
+        {
+          "title": "Using switch-case statements",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python decorator?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A function that takes another function and extends its behavior",
+          "correct": true
+        },
+        {
+          "title": "A type of loop in Python",
+          "correct": false
+        },
+        {
+          "title": "A method for handling exceptions",
+          "correct": false
+        },
+        {
+          "title": "A way to define variables",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the use of 'self' in Python classes?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'self' refers to the instance of the class",
+          "correct": true
+        },
+        {
+          "title": "'self' is used to refer to class variables",
+          "correct": false
+        },
+        {
+          "title": "'self' is a keyword for defining methods",
+          "correct": false
+        },
+        {
+          "title": "'self' is a global variable",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python metaclass?",
+      "difficultLevel": "hard",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A class of a class that defines how a class behaves",
+          "correct": true
+        },
+        {
+          "title": "A special type of class variable",
+          "correct": false
+        },
+        {
+          "title": "A method to create instances of a class",
+          "correct": false
+        },
+        {
+          "title": "A function to manage memory allocation",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the purpose of the 'pass' statement in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A null statement used as a placeholder",
+          "correct": true
+        },
+        {
+          "title": "A statement to exit a loop",
+          "correct": false
+        },
+        {
+          "title": "A method to define variables",
+          "correct": false
+        },
+        {
+          "title": "A tool for error handling",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between 'append()' and 'extend()' methods in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'append()' adds a single element to a list, while 'extend()' adds multiple elements",
+          "correct": true
+        },
+        {
+          "title": "'extend()' adds a single element to a list, while 'append()' adds multiple elements",
+          "correct": false
+        },
+        {
+          "title": "'append()' removes elements from a list, while 'extend()' adds elements",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between 'append()' and 'extend()'",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What are Python's built-in types?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "int, float, str, list, tuple, dict, set",
+          "correct": true
+        },
+        {
+          "title": "char, double, short",
+          "correct": false
+        },
+        {
+          "title": "boolean, float, set, map",
+          "correct": false
+        },
+        {
+          "title": "None, bytes, range",
+          "correct": true
+        }
+      ]
+    }
+  }
+]
