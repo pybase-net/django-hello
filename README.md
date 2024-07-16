@@ -63,6 +63,12 @@ class User(AbstractUser, BaseModel):
     pass
 ```
 
+### Writing tests
+
+```sh
+pip install pytest-asyncio
+```
+
 ## References
 
 - [Django Tutorial](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)
