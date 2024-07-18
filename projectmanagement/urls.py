@@ -15,5 +15,6 @@ urlpatterns = [
     path('game/history', views.game_history, name='game_history'),
     path('game/rank', views.game_rank, name='game_rank'),
     # user
-    path('profile', views.user_profile, name='user_profile')
+    path('profile', views.user_profile, name='user_profile'),
+    path('profile/<int:user_id>', views.user_detail, name='user_detail'),
 ]

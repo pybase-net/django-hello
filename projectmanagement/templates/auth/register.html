@@ -5,6 +5,38 @@
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fw-light">Register</h1>
+                <form action="{% url 'auth_register' %}" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3 row">
+                        <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstName" name="first_name"/>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastName" name="last_name"/>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="pm_email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="pm_email" name="email"/>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="pm_password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="pm_password" name="password"/>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-end">
+                        <div class="col-3 d-flex justify-content-end">
+                            <button type="submit" class="btn btn-outline-primary">Register</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
