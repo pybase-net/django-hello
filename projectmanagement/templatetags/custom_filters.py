@@ -24,3 +24,20 @@ def form_input_class(field, error=None):
     if error:
         attrs['class'] += ' is-invalid'
     return field.as_widget(attrs=attrs)
+
+
+@register.filter(name='bootstrap_alert_class')
+def bootstrap_alert_class(message):
+    tag = message.tags
+    if tag == 'debug':
+        return 'alert-secondary'
+    elif tag == 'info':
+        return 'alert-info'
+    elif tag == 'success':
+        return 'alert-success'
+    elif tag == 'warning':
+        return 'alert-warning'
+    elif tag == 'error':
+        return 'alert-danger'
+    else:
+        return 'alert-primary'  # Default to a generic primary alert

@@ -13,3 +13,5 @@ GENERIC_ERRORS = {
     'invalid': _("%(field)s is invalid"),
     'unique': _("%(field)s is already in use"),
 }
+
+AUTH_REGISTER_SUCCESS = _('Congratulation, %(fullname)s! Your account has been created!')

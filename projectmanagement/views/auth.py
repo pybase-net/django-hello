@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.contrib import messages
 from ..forms import RegisterForm
 from ..models import User
+from projectmanagement.translation import translation
 
 
 def auth_register(request):
@@ -17,7 +19,17 @@ def auth_register(request):
         # validate form data
         errors, data = form.process_form_data()
         context['errors'] = errors
-        context['data'] = data
+        if data:
+            u: User = User.objects.create_user(
+                email=data['email'],
+                username=User.generate_username(data['email']),
+                password=data['password'],
+                first_name=data['first_name'],
+                last_name=data['last_name']
+            )
+            messages.add_message(request, messages.SUCCESS,
+                                 translation.AUTH_REGISTER_SUCCESS % {'fullname': u.full_name()})
+            return render(request, 'auth/register_success.html', context)
     return render(request, 'auth/register.html', context)
 
 

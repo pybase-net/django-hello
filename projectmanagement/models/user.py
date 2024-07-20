@@ -1,6 +1,7 @@
 from django.db import models
 from .base import BaseModel
 from django.contrib.auth.models import AbstractUser, BaseUserManager
+from datetime import datetime
 
 
 class UserManager(BaseUserManager):
@@ -28,3 +29,9 @@ class User(AbstractUser, BaseModel):
 
     def is_admin(self):
         return self.is_superuser or self.is_staff
+
+    @staticmethod
+    def generate_username(email) -> str:
+        username = f'{email}'.split('@')[1].lower()
+        suffix = int(datetime.now().timestamp())
+        return f'{username}{suffix}'
