@@ -69,6 +69,14 @@ class User(AbstractUser, BaseModel):
 pip install pytest-asyncio
 ```
 
+### Translation
+
+```sh
+mkdir locale
+django-admin makemessages -l en
+django-admin compilemessages
+```
+
 ## References
 
 - [Django Tutorial](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)

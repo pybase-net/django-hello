@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-20 20:46+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: projectmanagement/templates/auth/register.html:3
+#: projectmanagement/templates/auth/register.html:8
+#: projectmanagement/templates/auth/register.html:68
+msgid "Register"
+msgstr "Đăng ký"
+
+#: projectmanagement/templates/language_switcher.html:5
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: projectmanagement/templates/language_switcher.html:9
+#, fuzzy
+#| msgid "First name"
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+#: projectmanagement/translation/translation.py:5
+msgid "First name"
+msgstr "Tên"
+
+#: projectmanagement/translation/translation.py:6
+msgid "Last name"
+msgstr "Họ"
+
+#: projectmanagement/translation/translation.py:7
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: projectmanagement/translation/translation.py:8
+msgid "Email"
+msgstr "Email"
+
+#: projectmanagement/translation/translation.py:12
+#, python-format
+msgid "%(field)s is required"
+msgstr "%(field)s không được để trống"
+
+#: projectmanagement/translation/translation.py:13
+#, python-format
+msgid "%(field)s is invalid"
+msgstr "%(field)s không hợp lệ"
+
+#: projectmanagement/translation/translation.py:14
+#, python-format
+msgid "%(field)s is already in use"
+msgstr "%(field)s đã được sử dụng"

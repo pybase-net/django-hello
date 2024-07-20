@@ -17,4 +17,6 @@ urlpatterns = [
     # user
     path('profile', views.user_profile, name='user_profile'),
     path('profile/<int:user_id>', views.user_detail, name='user_detail'),
+    # language switcher
+    path('switch-language/<str:language_code>/', views.switch_language, name='switch_language'),
 ]

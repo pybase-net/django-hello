@@ -1,0 +1,11 @@
+{% load i18n %}
+<div class="language-switcher">
+    <form action="{% url 'switch_language' 'en' %}" method="get" style="display: inline;">
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <button type="submit">{% translate 'English' %}</button>
+    </form>
+    <form action="{% url 'switch_language' 'vi' %}" method="get" style="display: inline;">
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <button type="submit">{% translate 'Vietnamese' %}</button>
+    </form>
+</div>
