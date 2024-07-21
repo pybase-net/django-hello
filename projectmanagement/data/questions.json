@@ -498,5 +498,755 @@
         }
       ]
     }
+  },
+  {
+    "question": {
+      "title": "What is Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A programming language",
+          "correct": true
+        },
+        {
+          "title": "A type of snake",
+          "correct": false
+        },
+        {
+          "title": "A car brand",
+          "correct": false
+        },
+        {
+          "title": "A kind of fruit",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What are Python decorators?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Functions that modify the behavior of other functions",
+          "correct": true
+        },
+        {
+          "title": "A type of loop",
+          "correct": false
+        },
+        {
+          "title": "A way to define variables",
+          "correct": false
+        },
+        {
+          "title": "A special type of comment",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a list comprehension?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A concise way to create lists",
+          "correct": true
+        },
+        {
+          "title": "A method to sort lists",
+          "correct": false
+        },
+        {
+          "title": "A function to filter lists",
+          "correct": false
+        },
+        {
+          "title": "A way to concatenate lists",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "Explain the Global Interpreter Lock (GIL)",
+      "difficultLevel": "hard",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once",
+          "correct": true
+        },
+        {
+          "title": "A function to lock global variables",
+          "correct": false
+        },
+        {
+          "title": "A security feature in Python",
+          "correct": false
+        },
+        {
+          "title": "A feature that enhances multi-threading",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What are Python's built-in data types?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "list, tuple, dict, set",
+          "correct": true
+        },
+        {
+          "title": "array, stack, queue",
+          "correct": false
+        },
+        {
+          "title": "file, socket, thread",
+          "correct": false
+        },
+        {
+          "title": "int, str, float, bool",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between a shallow copy and a deep copy?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A shallow copy copies the reference of an object, while a deep copy copies the object itself",
+          "correct": true
+        },
+        {
+          "title": "A shallow copy copies all nested objects, while a deep copy only copies the top-level objects",
+          "correct": false
+        },
+        {
+          "title": "A shallow copy is slower than a deep copy",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between a shallow copy and a deep copy",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is PEP 8?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Python's style guide for writing clean code",
+          "correct": true
+        },
+        {
+          "title": "A performance enhancement proposal",
+          "correct": false
+        },
+        {
+          "title": "A debugging tool",
+          "correct": false
+        },
+        {
+          "title": "A Python library for data analysis",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between '==' and 'is' in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'==' checks for value equality, while 'is' checks for reference equality",
+          "correct": true
+        },
+        {
+          "title": "'==' is used for strings, while 'is' is used for integers",
+          "correct": false
+        },
+        {
+          "title": "'==' is faster than 'is'",
+          "correct": false
+        },
+        {
+          "title": "'is' checks for value equality, while '==' checks for reference equality",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a lambda function?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "An anonymous function expressed as a single statement",
+          "correct": true
+        },
+        {
+          "title": "A function that returns another function",
+          "correct": false
+        },
+        {
+          "title": "A built-in function for sorting",
+          "correct": false
+        },
+        {
+          "title": "A method to define classes",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python generator?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A function that returns an iterator and generates values one at a time",
+          "correct": true
+        },
+        {
+          "title": "A function that generates random numbers",
+          "correct": false
+        },
+        {
+          "title": "A function that automatically sorts data",
+          "correct": false
+        },
+        {
+          "title": "A function that compiles Python code",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a docstring in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A string literal that appears as the first statement in a module, function, class, or method definition",
+          "correct": true
+        },
+        {
+          "title": "A comment that appears at the end of a line of code",
+          "correct": false
+        },
+        {
+          "title": "A string used for debugging",
+          "correct": false
+        },
+        {
+          "title": "A string used to document a variable",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What does the 'map()' function do in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Applies a function to all the items in an input list",
+          "correct": true
+        },
+        {
+          "title": "Creates a dictionary",
+          "correct": false
+        },
+        {
+          "title": "Creates a list",
+          "correct": false
+        },
+        {
+          "title": "Creates a set",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python dictionary?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "An unordered collection of key-value pairs",
+          "correct": true
+        },
+        {
+          "title": "An ordered collection of key-value pairs",
+          "correct": false
+        },
+        {
+          "title": "A collection of keys",
+          "correct": false
+        },
+        {
+          "title": "A collection of values",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "How do you remove an item from a list in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Using the 'remove()' method",
+          "correct": true
+        },
+        {
+          "title": "Using the 'delete()' method",
+          "correct": false
+        },
+        {
+          "title": "Using the 'pop()' method",
+          "correct": true
+        },
+        {
+          "title": "Using the 'discard()' method",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the purpose of the 'with' statement in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Simplifies exception handling by encapsulating common preparation and cleanup tasks",
+          "correct": true
+        },
+        {
+          "title": "Creates a loop",
+          "correct": false
+        },
+        {
+          "title": "Defines a function",
+          "correct": false
+        },
+        {
+          "title": "Imports a module",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between 'range()' and 'xrange()' in Python 2?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'range()' returns a list, while 'xrange()' returns an xrange object",
+          "correct": true
+        },
+        {
+          "title": "'range()' returns an xrange object, while 'xrange()' returns a list",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between 'range()' and 'xrange()'",
+          "correct": false
+        },
+        {
+          "title": "'xrange()' is used for floating-point numbers, while 'range()' is used for integers",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What does the 'in' keyword do in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Checks if a value is present in a sequence",
+          "correct": true
+        },
+        {
+          "title": "Defines a function",
+          "correct": false
+        },
+        {
+          "title": "Imports a module",
+          "correct": false
+        },
+        {
+          "title": "Creates a loop",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "How do you check the type of an object in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Using the 'type()' function",
+          "correct": true
+        },
+        {
+          "title": "Using the 'check()' function",
+          "correct": false
+        },
+        {
+          "title": "Using the 'object()' function",
+          "correct": false
+        },
+        {
+          "title": "Using the 'isinstance()' function",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the purpose of the 'global' keyword in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "To modify a global variable inside a function",
+          "correct": true
+        },
+        {
+          "title": "To define a function",
+          "correct": false
+        },
+        {
+          "title": "To create a loop",
+          "correct": false
+        },
+        {
+          "title": "To import a module",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between 'list' and 'tuple' in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Lists are mutable, while tuples are immutable",
+          "correct": true
+        },
+        {
+          "title": "Tuples are mutable, while lists are immutable",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between 'list' and 'tuple'",
+          "correct": false
+        },
+        {
+          "title": "Lists are faster than tuples",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a Python module?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A file containing Python definitions and statements",
+          "correct": true
+        },
+        {
+          "title": "A directory containing Python files",
+          "correct": false
+        },
+        {
+          "title": "A built-in function",
+          "correct": false
+        },
+        {
+          "title": "A package containing sub-packages",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What does the 'with' statement do in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Simplifies exception handling by encapsulating common preparation and cleanup tasks",
+          "correct": true
+        },
+        {
+          "title": "Creates a loop",
+          "correct": false
+        },
+        {
+          "title": "Defines a function",
+          "correct": false
+        },
+        {
+          "title": "Imports a module",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the purpose of the 'yield' keyword in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "To create a generator",
+          "correct": true
+        },
+        {
+          "title": "To define a class",
+          "correct": false
+        },
+        {
+          "title": "To return multiple values from a function",
+          "correct": false
+        },
+        {
+          "title": "To stop the execution of a loop",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What does the 'dir()' function do in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Lists the attributes and methods of an object",
+          "correct": true
+        },
+        {
+          "title": "Deletes an object",
+          "correct": false
+        },
+        {
+          "title": "Creates a directory",
+          "correct": false
+        },
+        {
+          "title": "Changes the current working directory",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the purpose of the 'assert' statement in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "To set a condition that must be true for the program to continue",
+          "correct": true
+        },
+        {
+          "title": "To define a loop",
+          "correct": false
+        },
+        {
+          "title": "To create a function",
+          "correct": false
+        },
+        {
+          "title": "To raise an exception",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between 'sort()' and 'sorted()' in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'sort()' sorts a list in place, while 'sorted()' returns a new sorted list",
+          "correct": true
+        },
+        {
+          "title": "'sorted()' sorts a list in place, while 'sort()' returns a new sorted list",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between 'sort()' and 'sorted()'",
+          "correct": false
+        },
+        {
+          "title": "'sort()' can be used with any iterable, while 'sorted()' can only be used with lists",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is a lambda function?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "An anonymous function expressed as a single statement",
+          "correct": true
+        },
+        {
+          "title": "A function that returns another function",
+          "correct": false
+        },
+        {
+          "title": "A built-in function for sorting",
+          "correct": false
+        },
+        {
+          "title": "A method to define classes",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the purpose of the 'pass' statement in Python?",
+      "difficultLevel": "easy",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "A null statement used as a placeholder",
+          "correct": true
+        },
+        {
+          "title": "A statement to exit a loop",
+          "correct": false
+        },
+        {
+          "title": "A method to define variables",
+          "correct": false
+        },
+        {
+          "title": "A tool for error handling",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "How do you handle missing values in a dataset using pandas?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "Using the 'fillna()' method",
+          "correct": true
+        },
+        {
+          "title": "Using the 'dropna()' method",
+          "correct": true
+        },
+        {
+          "title": "Using the 'remove()' method",
+          "correct": false
+        },
+        {
+          "title": "Using the 'replace()' method",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "title": "What is the difference between 'is' and '==' in Python?",
+      "difficultLevel": "medium",
+      "multipleChoice": true,
+      "answers": [
+        {
+          "title": "'is' checks for object identity, while '==' checks for value equality",
+          "correct": true
+        },
+        {
+          "title": "'is' checks for value equality, while '==' checks for object identity",
+          "correct": false
+        },
+        {
+          "title": "There is no difference between 'is' and '=='",
+          "correct": false
+        },
+        {
+          "title": "'is' can only be used with integers, while '==' can be used with any type",
+          "correct": false
+        }
+      ]
+    }
   }
 ]

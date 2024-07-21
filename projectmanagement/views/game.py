@@ -1,10 +1,16 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from projectmanagement.game.factory import GameFactory
 
 
 @login_required
 def game(request):
-    return render(request, 'game/index.html')
+    context = {}
+    game_level = request.GET.get('level', 'default')
+    context['game_level'] = game_level
+    context['questions'] = GameFactory.start(game_level)
+
+    return render(request, 'game/index.html', context)
 
 
 @login_required

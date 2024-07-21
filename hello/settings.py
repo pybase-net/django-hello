@@ -154,6 +154,11 @@ LOCALE_PATHS = [
 
 STATIC_URL = 'static/'
 
+# If using Django 4.0 or later, you might need this
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
