@@ -120,6 +120,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"  # new
+
+AUTHENTICATION_BACKENDS = ['projectmanagement.backends.EmailBackend']
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 

@@ -85,3 +85,6 @@ django-admin compilemessages
 - [Django Meta](https://docs.djangoproject.com/en/5.0/ref/models/options/)
 - [Django Rest Framework](https://www.django-rest-framework.org/api-guide/viewsets/#example_3)
 - [Django Content Type Framework](https://docs.djangoproject.com/en/5.0/ref/contrib/contenttypes/)
+- [Django Authorization and Authentication](https://docs.djangoproject.com/en/5.0/topics/auth/default/#limiting-access-to-logged-in-users)
+- [Django Auth tutorial](https://learndjango.com/tutorials/django-login-and-logout-tutorial#log-out-button)
+- [Django Auth Custom Backends - Login with email](https://djangocentral.com/authentication-using-an-email-address/)

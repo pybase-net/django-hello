@@ -1,13 +1,18 @@
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from django.shortcuts import redirect
+from django.contrib import admin
 from . import views
 
 urlpatterns = [
+    # admin
+    path("admin/", admin.site.urls),
+    # home
     path("", views.home, name="home"),
     # auth
-    path('auth/login', views.auth_login, name='auth_login'),
+    # path('auth/login', views.auth_login, name='auth_login'),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('auth/register', views.auth_register, name='auth_register'),
-    re_path(r'^auth.*$', lambda request: redirect('auth_login', permanent=True)),
+    # re_path(r'^auth.*$', lambda request: redirect('auth_login', permanent=True)),
     # game
     path('game', views.game, name='game_index'),
     path('game/start', views.game_play, name='game_play'),
