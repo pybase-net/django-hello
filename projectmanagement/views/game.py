@@ -8,14 +8,26 @@ def game(request):
     context = {}
     game_level = request.GET.get('level', 'default')
     context['game_level'] = game_level
-    context['questions'] = GameFactory.start(game_level)
+    current_game = request.session.get('current_game')
+    if not current_game:
+        e, game, questions = GameFactory.start(request.user, game_level)
+    else:
+        e, game, questions = GameFactory.find_game(int(current_game))
+    if not e:
+        request.session['current_game'] = game.id
+    context['game'] = game
+    context['e'] = e
+    context['questions'] = questions
 
     return render(request, 'game/index.html', context)
 
 
 @login_required
 def game_play(request):
-    return render(request, 'game/game_play.html')
+    context = {}
+    answers = request.POST
+    context['answers'] = answers
+    return render(request, 'game/game_play.html', context)
 
 
 @login_required

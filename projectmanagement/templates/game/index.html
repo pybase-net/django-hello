@@ -5,44 +5,51 @@
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <h1 class="fw-light">Game ({{ questions|length }} questions)</h1>
-                <div id="quizCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                    <div class="carousel-inner">
-
-                        {% for question in questions %}
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-header text-white bg-success" style="text-align: left">
-                                        Question {{ forloop.counter }}
-                                    </div>
-                                    <div class="card-body" style="text-align: left">
-                                        <h5 class="card-title">{{ question }}?</h5>
-                                        <form id="quiz-form">
-                                            {% for answer in question.answers.all %}
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="question{{ question.id }}" id="answer{{ answer.id }}"
-                                                           value="{{ answer.title }}" required>
-                                                    <label class="form-check-label" for="answer{{ answer.id }}">
-                                                        {{ answer.title }}
-                                                    </label>
-                                                </div>
-                                            {% endfor %}
-                                            <div class="d-flex justify-content-end">
-                                                <button class="btn btn-secondary m-1 prev-slide">Prev</button>
-                                                {% if forloop.last %}
-                                                    <button class="btn btn-success m-1" type="submit">Submit</button>
-                                                {% else %}
-                                                    <button class="btn btn-success m-1 next-slide">Next</button>
-                                                {% endif %}
+                {% if e %}
+                    {% include 'alerts/alert.html' with alert_message=e alert_class='alert-danger' %}
+                {% else %}
+                    <h1 class="fw-light">Game ({{ questions|length }} questions)</h1>
+                    <div id="quizCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <form method="post" id="quiz-form" action="{% url 'game_play' %}">
+                                {% csrf_token %}
+                                {% for question in questions %}
+                                    <div class="carousel-item">
+                                        <div class="card">
+                                            <div class="card-header text-white bg-success" style="text-align: left">
+                                                Question {{ forloop.counter }}/{{ questions|length }}
                                             </div>
-                                        </form>
+                                            <div class="card-body" style="text-align: left">
+                                                <h5 class="card-title">{{ question }}?</h5>
+
+                                                {% for answer in question.answers.all %}
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="question_{{ question.id }}"
+                                                               id="answer{{ answer.id }}"
+                                                               value="{{ answer.id }}">
+                                                        <label class="form-check-label" for="answer{{ answer.id }}">
+                                                            {{ answer.title }}
+                                                        </label>
+                                                    </div>
+                                                {% endfor %}
+                                                <div class="d-flex justify-content-end">
+                                                    <button class="btn btn-secondary m-1 prev-slide">Prev</button>
+                                                    {% if forloop.last %}
+                                                        <button class="btn btn-success m-1" type="submit">Submit
+                                                        </button>
+                                                    {% else %}
+                                                        <button class="btn btn-success m-1 next-slide">Next</button>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        {% endfor %}
+                                {% endfor %}
+                            </form>
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             </div>
         </div>
     </section>

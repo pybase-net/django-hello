@@ -8,3 +8,5 @@ class Game(BaseModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_id')
     question_count = models.IntegerField(null=True, default=0)
     correct_answer_count = models.IntegerField(null=True, default=0)
+    started_at = models.DateTimeField(null=True)
+    ended_at = models.DateTimeField(null=True)
