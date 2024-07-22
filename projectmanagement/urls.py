@@ -14,7 +14,7 @@ urlpatterns = [
     path('auth/register', views.auth_register, name='auth_register'),
     # re_path(r'^auth.*$', lambda request: redirect('auth_login', permanent=True)),
     # game
-    path('game', views.game, name='game_index'),
+    path('game', views.game, name='game_start'),
     path('game/start', views.game_play, name='game_play'),
     path('game/end', views.game_end, name='game_end'),
     path('game/history', views.game_history, name='game_history'),

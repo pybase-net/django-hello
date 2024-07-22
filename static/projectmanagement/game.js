@@ -21,6 +21,26 @@ document.addEventListener('DOMContentLoaded', function () {
             carouselInstance.prev();
         });
     });
+
+    // Countdown Timer
+    let countdownElement = document.getElementById('game_remaining_time');
+    let remainingTime = parseInt(countdownElement.getAttribute('data-remaining-time'), 10);
+
+    function updateCountdown() {
+        remainingTime--;
+
+        // Update the display text
+        countdownElement.textContent = `Remaining Time: (${remainingTime}) second${remainingTime !== 1 ? 's' : ''}`;
+
+        // If the remaining time is zero, stop the countdown
+        if (remainingTime <= 0) {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = 'Time is up!';
+        }
+    }
+
+    let countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
 });
 
 

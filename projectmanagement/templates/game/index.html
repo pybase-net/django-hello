@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 {% block title %}Game{% endblock %}
 {% block content %}
     <section class="py-5 text-center container">
@@ -8,7 +9,20 @@
                 {% if e %}
                     {% include 'alerts/alert.html' with alert_message=e alert_class='alert-danger' %}
                 {% else %}
-                    <h1 class="fw-light">Game ({{ questions|length }} questions)</h1>
+                    <h1 class="fw-light">
+                        <span>Game ({{ questions|length }} questions)</span>
+                        <br/>
+                        {% if game.remaining_time %}
+                            <em id="game_remaining_time" data-remaining-time="{{ game.remaining_time }}"></em>
+                        {% else %}
+                            <form action="{% url 'game_start'  %}" method="post">
+                                {% csrf_token  %}
+                                <input type="hidden" name="restart" value="restart" />
+                                <button class="btn-lg btn-primary m-4">{% translate 'Restart Game' %}</button>
+                            </form>
+                        {% endif %}
+                    </h1>
+                    {% if game.started and game.remaining_time %}
                     <div id="quizCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                         <div class="carousel-inner">
                             <form method="post" id="quiz-form" action="{% url 'game_play' %}">
@@ -49,6 +63,19 @@
                             </form>
                         </div>
                     </div>
+                    {% elif game.remaining_time %}
+                        <form action="{% url 'game_start'  %}" method="post">
+                            {% csrf_token  %}
+                            <input type="hidden" name="start_game" value="start_game" />
+                            <button class="btn-lg btn-primary m-4">{% translate 'Continue' %}</button>
+                        </form>
+                    {% elif not game.started %}
+                        <form action="{% url 'game_start'  %}" method="post">
+                            {% csrf_token  %}
+                            <input type="hidden" name="start_game" value="start_game" />
+                            <button class="btn-lg btn-primary m-4">{% translate 'Start Game' %}</button>
+                        </form>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>

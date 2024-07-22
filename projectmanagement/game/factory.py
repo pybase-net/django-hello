@@ -3,6 +3,7 @@ import random
 from django.db import transaction
 from django.db.models import Prefetch, QuerySet
 from typing import List, Tuple, Any
+from django.utils import timezone
 
 from projectmanagement.models import Question, Answer, Game, GameDetail, User
 
@@ -18,9 +19,12 @@ def random_question_offset(limit: int, total_questions: int) -> (int, int):
 class GameFactory:
 
     @staticmethod
-    def find_game(game_id: int) -> tuple[Exception, Game, list[Question]]:
+    def find_game(game_id: int, start_game: bool, restart: bool) -> tuple[Exception, Game, list[Question]]:
         try:
             game = Game.objects.get(id=game_id)
+            if (start_game and not game.started) or (game.started and restart):
+                game.started_at = timezone.now()
+                game.save()
             # find questions
             game_details = GameDetail.objects.filter(
                 game_id=game.id

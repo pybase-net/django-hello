@@ -6,7 +6,7 @@ from .game import Game
 
 
 class GameDetail(BaseModel):
-    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, related_name='details', on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE, null=True)
     correct = models.BooleanField(default=False)

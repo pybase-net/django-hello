@@ -9,10 +9,12 @@ def game(request):
     game_level = request.GET.get('level', 'default')
     context['game_level'] = game_level
     current_game = request.session.get('current_game')
+    start_game = True if request.POST.get('start_game') else False
+    restart = True if request.POST.get('restart') else False
     if not current_game:
         e, game, questions = GameFactory.start(request.user, game_level)
     else:
-        e, game, questions = GameFactory.find_game(int(current_game))
+        e, game, questions = GameFactory.find_game(int(current_game), start_game, restart)
     if not e:
         request.session['current_game'] = game.id
     context['game'] = game

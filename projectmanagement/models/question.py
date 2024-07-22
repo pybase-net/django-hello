@@ -8,6 +8,11 @@ class Question(BaseModel):
     EASY = 'easy'
     MEDIUM = 'medium'
     HARD = 'hard'
+    TIME_ALLOCATIONS = {
+        EASY: 30,  # seconds
+        MEDIUM: 60,  # seconds
+        HARD: 150  # seconds
+    }
     DIFFICULT_LEVELS = {
         EASY: EASY,
         MEDIUM: MEDIUM,
@@ -23,3 +28,7 @@ class Question(BaseModel):
 
     def __str__(self):
         return f'{self.title} ({self.difficult_level})'
+
+    @property
+    def time_allocation(self):
+        return self.TIME_ALLOCATIONS[self.difficult_level]
