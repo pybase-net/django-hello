@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+from kombu import Exchange, Queue
+import re
 
 load_dotenv()
 
@@ -163,3 +165,49 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Celery Configuration Options
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+
+# Optional: Setting up additional queues and routes
+
+CELERY_TASK_QUEUES = (
+    Queue('default', Exchange('default'), routing_key='default'),
+    # Queue('cpu-bound', Exchange('cpu-bound'), routing_key='cpu-bound'),
+    # Queue('feeds', Exchange('feeds'), routing_key='feeds'),
+    # Queue('media', Exchange('media'), routing_key='media'),
+    # Queue('video', Exchange('media'), routing_key='media.video.encode'),
+)
+
+CELERY_TASK_ROUTES = {
+    'hello.tasks.add': {'queue': 'default'},
+    # 'celery.ping': {'queue': 'default'},
+    # 'hello.tasks.add': {'queue': 'cpu-bound'},
+    #     'projectmanagement.tasks.high_priority_task': {'queue': 'cpu-bound'},
+    #     'projectmanagement.tasks.process_feed': {'queue': 'feeds'},  # glob pattern
+    #     re.compile(r'(image|video)\.tasks\..*'): {'queue': 'media'},  # regex pattern
+    #     'projectmanagement.tasks.encode_video': {
+    #         'queue': 'video',
+    #         'exchange': 'media',
+    #         'routing_key': 'media.video.encode',
+    #     },
+}
+
+CELERY_TASK_ACKS_LATE = True
+CELERY_TASK_REJECT_ON_WORKER_LOST = True
+CELERY_TASK_ACKS_ON_FAILURE_OR_TIMEOUT = True
+
+# settings.py
+
+# Other configurations...
+
+CELERY_TASK_TIME_LIMIT = 300  # Max time a task can run (in seconds)
+CELERY_TASK_SOFT_TIME_LIMIT = 180  # Soft time limit (in seconds)
+CELERY_TASK_EXPIRES = 3600  # Task expiry time in broker (in seconds)
+
+CELERY_WORKER_PREFETCH_MULTIPLIER = 1  # Number of tasks each worker prefetches

@@ -24,4 +24,11 @@ urlpatterns = [
     path('profile/<int:user_id>', views.user_detail, name='user_detail'),
     # language switcher
     path('switch-language/<str:language_code>/', views.switch_language, name='switch_language'),
+    # jobs
+    path('add/<int:a>/<int:b>/', views.jobs.add_numbers, name='add_numbers'),
+    path('subtract/<int:a>/<int:b>/', views.jobs.subtract_numbers, name='subtract_numbers'),
+    path('encode/<str:video_id>/', views.jobs.encode_video_task, name='encode_video_task'),
+    path('process_feed/<str:feed_id>/', views.jobs.process_feed_task, name='process_feed_task'),
+    path('resize_image/<str:image_id>/', views.jobs.resize_image_task, name='resize_image_task'),
+    path('result/<str:task_id>/', views.jobs.get_result, name='get_result'),
 ]

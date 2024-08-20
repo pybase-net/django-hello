@@ -2,6 +2,25 @@
 
 In this project, we'll go through all of django basic components.
 
+## Setup Dev Environment
+
+```sh
+pip install --user pipenv
+export PIPENV_VENV_IN_PROJECT=1
+pipenv install
+pipenv shell
+pipenv install django
+pipenv install celery
+pipenv install python-dotenv
+pipenv install psycopg2-binary
+```
+
+## Getting start
+
+```sh
+docker-compose up -d
+```
+
 ## Hello World App
 
 - Quiz: Question and Answers
@@ -88,3 +107,8 @@ django-admin compilemessages
 - [Django Authorization and Authentication](https://docs.djangoproject.com/en/5.0/topics/auth/default/#limiting-access-to-logged-in-users)
 - [Django Auth tutorial](https://learndjango.com/tutorials/django-login-and-logout-tutorial#log-out-button)
 - [Django Auth Custom Backends - Login with email](https://djangocentral.com/authentication-using-an-email-address/)
+
+```sh
+pip install pipenv
+PIPENV_VENV_IN_PROJECT=1 pipenv sync
+```
